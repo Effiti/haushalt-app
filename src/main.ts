@@ -1,20 +1,24 @@
 import Alpine from 'alpinejs';
 import "./app.css";
 import obj from "./content.json" with { "type": "json" };
+import persist from '@alpinejs/persist'
+ 
+Alpine.plugin(persist)
 
 
+Alpine.data("main", function(){
 
-Alpine.data("main", ()=>{
   console.log(obj.ressorts.length);
   return {
   ressorts: obj.ressorts,
   groups: obj.groups,
-  amounts:  new Array(obj.ressorts.length).fill(0),
+  //@ts-ignore
+  amounts:  this.$persist(new Array(obj.ressorts.length).fill(0)),
   get spend() {
-    return this.amounts.reduce((a,b)=>a+b);
+    return this.amounts.reduce((a:number,b:number)=>a+b);
   },
   get debt() {
-    return Math.max(this.amounts.reduce((a,b)=>a+b)-100, 0);
+    return Math.max(this.amounts.reduce((a:number,b:number)=>a+b)-100, 0);
   }
 };
 });
