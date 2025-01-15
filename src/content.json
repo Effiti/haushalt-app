@@ -1,0 +1,16 @@
+{
+  "groups": [
+    
+  ],
+  "ressorts": [
+    {
+      "name": "Rente"
+    },
+    {
+      "name" : "Infrastruktur"
+    },
+    {
+      "name": "Migration/Integration"
+    }
+  ]
+}

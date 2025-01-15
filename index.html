@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haushaltsplaner</title>
+  </head>
+  <body>
+    <div id="app" x-data="main">
+    <div class="grid grid-cols-4 gap-4">
+    <template x-for="(r, ri) in ressorts">
+    <div class="card bg-base-100 w-96 shadow-xl px-5 py-10 items-center col-span-1">
+        <p class="mb-5" x-text="r.name">
+        </p>
+          <input x-model.number="amounts[ri]"
+          type="range" min="0" max="50" value="50" class="range">  </input>          
+        <div class="badge mt-5">
+              <p x-text="amounts[ri]" class=""></p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                </svg>
+                </div>
+      </div>
+    </template>
+    </div>  
+
+    <div class="stats shadow absolute bottom-10 left-1/2 transform -translate-x-1/2">
+      <div class="stat place-items-center">
+        <div class="stat-title">Ausgaben</div>
+        <div class="stat-value" x-text="spend"></div>
+        <div class="stat-desc">Von 100</div>
+      </div>
+      <div class="stat place-items-center">
+        <div class="stat-title">Schulden</div>
+        <div class="stat-value" :class="debt > 0 ? 'text-red-500' : 'text-green-500'"  x-text="debt"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
