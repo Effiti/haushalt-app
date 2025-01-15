@@ -1,16 +1,32 @@
 {
   "groups": [
+    {
+      "id": 0,
+      "name": "Industrie"
+    }
     
   ],
   "ressorts": [
     {
+      "id": 0,
       "name": "Rente"
     },
     {
+      "id": 1,
       "name" : "Infrastruktur"
     },
     {
+      "id": 2,
       "name": "Migration/Integration"
+    }
+  ],
+  "reactions": [
+    {
+      "group": 0,
+      "ressort": 1,
+      "type": 1,
+      "text": 2
+      
     }
   ]
 }

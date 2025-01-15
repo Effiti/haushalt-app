@@ -8,13 +8,14 @@
   </head>
   <body>
     <div id="app" x-data="main">
-    <div class="grid grid-cols-4 gap-4">
+    <!--class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 w-full container justify-around mx-0 px-0"-->
+    <div  class="flex flex-wrap justify-center mt-10">
     <template x-for="(r, ri) in ressorts">
-    <div class="card bg-base-100 w-96 shadow-xl px-5 py-10 items-center col-span-1">
+    <div class="card bg-base-100 w-96 shadow-xl px-5 py-10 items-center col-span-1 m-8">
         <p class="mb-5" x-text="r.name">
         </p>
           <input x-model.number="amounts[ri]"
-          type="range" min="0" max="50" value="50" class="range">  </input>          
+          type="range" min="0" max="50" value="50" class="range" >  </input>          
         <div class="badge mt-5">
               <p x-text="amounts[ri]" class=""></p>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" size-6">
@@ -25,7 +26,7 @@
     </template>
     </div>  
 
-    <div class="stats shadow absolute bottom-10 left-1/2 transform -translate-x-1/2">
+    <div class="stats shadow absolute bottom-10 left-1/2 transform -translate-x-1/2 sticky">
       <div class="stat place-items-center">
         <div class="stat-title">Ausgaben</div>
         <div class="stat-value" x-text="spend"></div>
