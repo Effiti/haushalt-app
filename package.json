@@ -14,13 +14,17 @@
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17",
     "typescript": "~5.6.2",
+    "unplugin-auto-import": "^19.0.0",
     "vite": "^6.0.5"
   },
   "dependencies": {
     "@alpinejs/persist": "^3.14.8",
+    "@iconify/json": "^2.2.295",
+    "@iconify/tailwind": "^1.2.0",
     "@tailwindcss/vite": "^0.0.0-development.1",
     "@types/alpinejs": "^3.13.11",
     "@types/alpinejs__persist": "^3.13.4",
-    "alpinejs": "^3.14.8"
+    "alpinejs": "^3.14.8",
+    "tsx-dom": "^3.0.1"
   }
 }

@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 import daisyui from "daisyui";
+import { addDynamicIconSelectors } from "@iconify/tailwind";
+
+/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -9,7 +12,8 @@ export default {
     extend: {},
   },
   plugins: [
-    daisyui
+    daisyui,
+    addDynamicIconSelectors()
   ],
 }
 
