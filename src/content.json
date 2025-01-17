@@ -23,10 +23,15 @@
   "reactions": [
     {
       "group": 0,
+      "ressort": 2
+      "text": "aa"
+    },
+    {
+      "group": 0,
       "ressort": 1,
       "type": 1,
-      "text": 2
-      
+      "threshold": 30,
+      "text": "Hallo"
     }
   ]
 }
