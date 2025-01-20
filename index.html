@@ -17,17 +17,35 @@
           type="range" min="0" max="50" value="50" class="range" >  </input>          
           <div class="badge mt-5">
               <p x-text="costs[ri]" class=""></p>
-              <span class="icon-[iconoir--coins]" style="width: 24px; height: 24px;"></span>
+              <span class="iconify iconoir--coins" style="width: 24px; height: 24px;"></span>
           </div>
           <span x-init="watch_slider(r, ri)"></span>
     </div>  
     </template>
     </div>
-    <template x-for="reaction in shown_reactions">
-        <span x-text="reaction"></span>
-    </template>
+    <template x-for="reaction in groups.flatMap(el=>el.shown_reactions)">
+      <div class="flex shadow-xl px-5 py-10">
+        <span :class="groups[reaction.group].icon"></span>
+        <span x-text="reaction.text"></span>
+      </div>
 
-    <div class="stats shadow absolute bottom-10 left-1/2 transform -translate-x-1/2 sticky">
+    </template>
+    <div class="mb-20 shadow-xl px-5 py-10">
+    <template x-for="group in groups">
+      <div>
+        <div class="badge">
+          <span x-text="group.name"></span>
+          <span :class="group.icon" style="width: 24px; height: 24px;"></span>
+
+        </div>
+        <span :class="'badge' +'badge-'+group.shown_reactions.length>0?'error':'success'" x-text="group.shown_reactions.length">
+      </span>
+    </div>
+
+    </template>
+    </div>
+
+    <div class="stats shadow fixed bottom-10 left-1/2 transform -translate-x-1/2 sticky">
       <div class="stat place-items-center">
         <div class="stat-title">Ausgaben</div>
         <div class="stat-value" x-text="spend"></div>

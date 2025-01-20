@@ -2,7 +2,8 @@
   "groups": [
     {
       "id": 0,
-      "name": "Industrie"
+      "name": "Arbeitgeber",
+      "icon": "iconify material-symbols--work"
     }
     
   ],
@@ -22,11 +23,15 @@
   ],
   "reactions": [
     {
+      "id": 0,
       "group": 0,
       "ressort": 2,
-      "text": "aa"
+      "threshold": 30,
+      "text": "aa",
+      "type": 1
     },
     {
+      "id": 0,
       "group": 0,
       "ressort": 1,
       "type": 1,

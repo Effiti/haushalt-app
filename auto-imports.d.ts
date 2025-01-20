@@ -7,7 +7,6 @@
 export {}
 declare global {
   const Fragment: typeof import('start-dom-jsx')['Fragment']
-  const coins: typeof import('./src/components/icons/coins')['default']
   const h: typeof import('start-dom-jsx')['h']
   const mount: typeof import('./src/components/index')['mount']
   const setupCounter: typeof import('./src/counter')['setupCounter']

@@ -3,27 +3,60 @@ import Alpine from 'alpinejs';
 import "./app.css";
 import obj from "./content.json" with { "type": "json" };
 import persist from '@alpinejs/persist'
+obj.groups = obj.groups.sort((a,b)=>a.id-b.id);
+obj.ressorts= obj.ressorts.sort((a,b)=>a.id-b.id);
+obj.reactions= obj.reactions.sort((a,b)=>a.id-b.id);
 
 type Ressort = {
   name: string,
   id: number
 };
+type Reaction = {
+  group: number,
+  ressort: number,
+  threshold: number,
+  text: string,
+  type: number,
+  id: number
+}
+
+class Group {
+  shown_reactions:Reaction[] = [];
+  possible_reactions: Reaction[] = [];
+  id = 0;
+  icon = "";
+  name = "";
+  constructor(content: {id:number, name: string, icon: string},) {
+    this.id = content.id;
+    this.name = content.name;
+    this.icon = content.icon;
+    this.possible_reactions = obj.reactions.filter((r)=> {
+      return r.group == this.id;
+    })
+  }
+  process(rid: number, new_cost: number) {
+    let temp = this.shown_reactions.filter(el=> {
+      return el.ressort!==rid;
+    })
+    let added = this.possible_reactions.filter(el=>{
+      return el.ressort == rid && (el.type==1 ? new_cost > el.threshold : new_cost < el.threshold)
+    })
+    let result = temp.concat(added).sort((a,b)=>a.id-b.id);
+    // update only if something actually changed, so we can have transitions
+    if(result !== this.shown_reactions) this.shown_reactions = result;
+  }
+}
 
 Alpine.plugin(persist)
-const CHANGE_THRESHOLD = 1;
 mount()
-const find_reactions = (rid: number, type: 1|-1) => {
-  return obj.reactions.filter(el=> {
-    return el.ressort == rid && el.type == type
-  })
-}
 
 Alpine.data("main", function() {
 
   console.log(obj.ressorts.length);
   return {
     ressorts: obj.ressorts,
-    groups: obj.groups,
+    //@ts-ignore
+    groups: obj.groups.map(el => new Group(el)),
     
     //@ts-ignore
     costs: this.$persist(new Array(obj.ressorts.length).fill(0)) as number[],
@@ -33,15 +66,10 @@ Alpine.data("main", function() {
     get debt() {
       return Math.max(this.costs.reduce((a: number, b: number) => a + b) - 100, 0);
     },
-    shown_reactions: [],
-    watch_slider(r: Ressort, ri: number) {
+    watch_slider(r: Ressort, _ri: number) {
 
-      this.$watch('costs[ri]', (csts, old) => {
-        if (Math.abs(csts - old) < CHANGE_THRESHOLD) return;
-        //FIXME
-        console.log("reacting");
-        //@ts-ignore
-        this.shown_reactions.push(find_reactions(r.id, csts[ri]>old?1:-1))
+      this.$watch('costs[ri]', (cst) => {
+        this.groups.forEach(group=>group.process(r.id, cst));
       });
     }
   };
