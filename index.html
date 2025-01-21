@@ -35,12 +35,17 @@
     <div class="mb-20 shadow-xl px-5 py-10">
     <template x-for="group in groups">
       <div>
-        <div class="badge">
+        <div class="badge p-4">
           <span x-text="group.name"></span>
           <span :class="group.icon" style="width: 24px; height: 24px;"></span>
 
         </div>
-        <span :class="'badge' +'badge-'+group.shown_reactions.length>0?'error':'success'" x-text="group.shown_reactions.length">
+        <template x-if="group.shown_reactions.length>0">
+          <span class="badge badge-error p-2" x-text="group.shown_reactions.length"></span>
+        </template>
+        <template x-if="group.shown_reactions.length==0">
+          <span class="badge badge-success p-2" x-text="group.shown_reactions.length"></span>
+        </template>
       </span>
     </div>
 
