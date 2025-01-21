@@ -66,8 +66,9 @@ Alpine.data("main", function() {
     get debt() {
       return Math.max(this.costs.reduce((a: number, b: number) => a + b) - 100, 0);
     },
-    watch_slider(r: Ressort, _ri: number) {
+    watch_slider(r: Ressort, ri: number) {
 
+      this.groups.forEach(group=>group.process(r.id, this.costs[ri]));
       this.$watch('costs[ri]', (cst) => {
         this.groups.forEach(group=>group.process(r.id, cst));
       });
