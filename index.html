@@ -24,7 +24,7 @@
     </template>
     </div>
     <template x-for="reaction in groups.flatMap(el=>el.shown_reactions)">
-      <div class="chat chat-startshadow-xl px-5 py-10">
+      <div class="chat chat-startshadow-xl px-5">
         <div class="chat-bubble">
         <span :class="groups[reaction.group].icon"></span>
         <span x-text="reaction.text"></span>
