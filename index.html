@@ -13,37 +13,37 @@
     <div class="card bg-base-100 w-96 shadow-xl px-5 py-10 items-center col-span-1 m-8">
         <p class="mb-5" x-text="r.name">
         </p>
-        <template x-if="r.sliders==null">
+        <template x-if="r.sliders=='default'">
           <div>
-          <input x-model.number="costs[ri]"
+          <input x-model.number="r.cost"
           type="range" min="0" max="50" value="50" class="range" >  </input>          
           <div class="badge mt-5">
-              <p x-text="costs[ri]" class=""></p>
+              <p x-text="r.cost" class=""></p>
               <span class="iconify iconoir--coins" style="width: 24px; height: 24px;"></span>
           </div>
           <span x-init="watch_slider(r, ri)"></span>
         </div>
         </template>    
         <template x-if="r.sliders=='rente'">
-          <div x-data="{a:25, b:25, c:50}" x-effect="c=a+b;a=c-b;costs[ri]=b">
+          <div>
           <div class="join-vertical">
 
             <span class="join-item">Rentenbeitrag</span>
-            <input x-model.number="a"
+            <input x-model.number="r.a"
           type="range" min="0" max="50" value="50" class="range join-item" >  </input> 
           </div>
           <div class="join-vertical">
           <span class="join-item">Rentenauszahlung</span>
-          <input x-model.number="c"
-          type="range" min="0" max="50" value="50" class="range join-item px-5" >  </input>
+          <progress x-model.number="r.c"
+          type="range" max="100" value="50" class="progress join-item" >  </progress>
           </div>
           <div class="join-vertical">
             <span class="join-item">Staatsbeitrag</span>
-          <input x-model.number="b"
+          <input x-model.number="r.b"
           type="range" min="0" max="50" value="50" class="range join-item" >  </input>   
           </div>
           <div class="badge mt-5">
-              <p x-text="costs[ri]" class=""></p>
+              <p x-text="r.b" class=""></p>
               <span class="iconify iconoir--coins" style="width: 24px; height: 24px;"></span>
           </div>
           <span x-init="watch_slider(r, ri)"></span>

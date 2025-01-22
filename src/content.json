@@ -34,8 +34,9 @@
     {
       "id": 0,
       "group": 0,
-      "ressort": 1,
+      "ressort": 0,
       "type": 1,
+      "part":2,
       "threshold": 30,
       "text": "Hallo"
     }

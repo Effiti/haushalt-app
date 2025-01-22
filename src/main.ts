@@ -3,13 +3,15 @@ import Alpine from 'alpinejs';
 import "./app.css";
 import obj from "./content.json" with { "type": "json" };
 import persist from '@alpinejs/persist'
+
 obj.groups = obj.groups.sort((a,b)=>a.id-b.id);
 obj.ressorts= obj.ressorts.sort((a,b)=>a.id-b.id);
 obj.reactions= obj.reactions.sort((a,b)=>a.id-b.id);
 
-type Ressort = {
+type Ressort_ = {
   name: string,
-  id: number
+  id: number,
+  sliders?: string | undefined,
 };
 type Reaction = {
   group: number,
@@ -17,7 +19,54 @@ type Reaction = {
   threshold: number,
   text: string,
   type: number,
-  id: number
+  id: number,
+  part?: number | undefined
+}
+
+class Ressort {
+  id: number = 0;
+  name: string = ""; 
+  parts: number[] = [25,25,50];
+  sliders: string = "";
+
+  constructor(base: Ressort_) {
+    this.id = base.id, this.name = base.name, this.sliders = base.sliders || "default";
+    if (this.sliders=="default") {
+      this.parts = [50];
+    } else if (this.sliders=="rente") {
+      this.parts = [25,25,50];
+    }
+
+  }
+  get cost() {
+    return this.parts.length == 1 ? this.parts[0] : this.parts[2]; 
+  }
+  set cost(a: number) {
+    this.parts.length == 1 ? this.parts[0] = a : this.parts[2] = a; 
+  }
+  
+  get a() {
+    return this.parts[0]; 
+  }
+  get b() {
+    return this.parts[1]; 
+  }
+  get c() {
+    return this.parts[2]; 
+  }
+  set a(a:number) {
+    this.c = a + this.b;
+    this.parts[0] = a; 
+  }
+  set b(b:number) {
+    this.c = this.a + b;
+    this.parts[1] = b; 
+  }
+  set c(c:number) {
+    this.parts[2] = c; 
+  }
+  
+
 }
 
 class Group {
@@ -36,12 +85,15 @@ class Group {
     });
     if (content.sliders!==undefined) this.sliders=content.sliders;
   }
-  process(rid: number, new_cost: number) {
+  process(rid: number, parts: number[]) {
     let temp = this.shown_reactions.filter(el=> {
       return el.ressort!==rid;
     })
     let added = this.possible_reactions.filter(el=>{
-      return el.ressort == rid && (el.type==1 ? new_cost > el.threshold : new_cost < el.threshold)
+      if(el.ressort != rid)
+        return false;
+      let changed = parts[el.part||0];
+      return (el.type==1 ? changed > el.threshold : changed < el.threshold)
     })
     let result = temp.concat(added).sort((a,b)=>a.id-b.id);
     // update only if something actually changed, so we can have transitions
@@ -56,23 +108,22 @@ Alpine.data("main", function() {
 
   console.log(obj.ressorts.length);
   return {
-    ressorts: obj.ressorts,
+    //@ts-ignore
+    ressorts: obj.ressorts.map(el => new Ressort(el, this.$persist)),
     //@ts-ignore
     groups: obj.groups.map(el => new Group(el)),
     
-    //@ts-ignore
-    costs: this.$persist(new Array(obj.ressorts.length).fill(0)) as number[],
     get spend() {
-      return this.costs.reduce((a: number, b: number) => a + b);
+      return this.ressorts.reduce<number>((a: number, b: Ressort) => a + b.cost, 0);
     },
     get debt() {
-      return Math.max(this.costs.reduce((a: number, b: number) => a + b) - 100, 0);
+      return Math.max(this.spend- 100, 0);
     },
     watch_slider(r: Ressort, ri: number) {
 
-      this.groups.forEach(group=>group.process(r.id, this.costs[ri]));
-      this.$watch('costs[ri]', (cst) => {
-        this.groups.forEach(group=>group.process(r.id, cst));
+      this.groups.forEach(group=>group.process(r.id, r.parts));
+      this.$watch('r.parts', (parts) => {
+        this.groups.forEach(group=>group.process(r.id, parts));
       });
     }
   };
