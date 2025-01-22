@@ -26,13 +26,15 @@ class Group {
   id = 0;
   icon = "";
   name = "";
-  constructor(content: {id:number, name: string, icon: string},) {
+  sliders: string|null = null;
+  constructor(content: {id:number, name: string, icon: string, sliders: string|undefined},) {
     this.id = content.id;
     this.name = content.name;
     this.icon = content.icon;
     this.possible_reactions = obj.reactions.filter((r)=> {
       return r.group == this.id;
-    })
+    });
+    if (content.sliders!==undefined) this.sliders=content.sliders;
   }
   process(rid: number, new_cost: number) {
     let temp = this.shown_reactions.filter(el=> {

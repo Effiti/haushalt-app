@@ -10,7 +10,8 @@
   "ressorts": [
     {
       "id": 0,
-      "name": "Rente"
+      "name": "Rente",
+      "sliders": "rente"
     },
     {
       "id": 1,
