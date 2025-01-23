@@ -3,7 +3,67 @@
     {
       "id": 0,
       "name": "Arbeitgeber",
+      "icon": "iconify fluent--people-team-toolbox-24-fille"
+    },
+    {
+      "id": 1,
+      "name": "Umweltverbände",
+      "icon": "iconify pajamas--nature"
+    },
+    
+
+    {
+      "id": 2,
+      "name": "Junge Bevölkerung",
       "icon": "iconify material-symbols--work"
+    },
+    
+
+    {
+      "id": 3,
+      "name": "Industrie",
+      "icon": "iconify material-symbols--factory"
+    },
+    
+
+
+
+    {
+      "id": 4,
+      "name": "Wissenschaftliche Gemeinschaft",
+      "icon": "iconify proicons--beaker"
+    },
+    
+
+
+    {
+      "id": 5,
+      "name": "Ukraine",
+      "icon": "iconify emojione-v1--flag-for-ukraine"
+    },
+    
+
+
+    {
+      "id": 6,
+      "name": "Friedens Organisationen",
+      "icon": "iconify game-icons--peace-dove"
+    },
+
+ 
+    {
+      "id": 7,
+      "name": "Arbeitssuchende",
+      "icon": "iconify material-symbols--group-search"
+    },
+    
+
+
+
+    {
+      "id": 8,
+      "name": "Arbeitsnehmende",
+      "icon": "iconify gravity-ui--person-worker"
     }
     
   ],
