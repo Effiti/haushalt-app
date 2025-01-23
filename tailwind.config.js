@@ -13,7 +13,7 @@ export default {
   },
   plugins: [
     daisyui,
-    addIconSelectors(['iconoir', 'material-symbols', 'clarity', 'pajamas', 'proicons', 'emojione-v1', 'game-icons', 'gravity-ui', 'fluent'])
+    addIconSelectors(['iconoir', 'material-symbols', 'clarity', 'pajamas', 'proicons', 'emojione-v1', 'game-icons', 'gravity-ui', 'fluent', 'streamline'])
   ],
 }
 

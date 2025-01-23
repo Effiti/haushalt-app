@@ -1,91 +1,94 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Haushaltsplaner</title>
-  </head>
-  <body>
-    <div id="app" x-data="main">
-    <div class="flex flex-col md:flex-row w-full">
-      <div  class="flex flex-wrap justify-center mt-10 grow-3">
-      <template x-for="(r, ri) in ressorts">
-        <div class="card bg-base-100 w-96 shadow-xl px-5 py-10 items-center col-span-1 m-8">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plane Deinen eigenen Staatshaushalt!">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="mask-icon" href="/mask-icon.svg" color="#FFFFFF">
+  <meta name="theme-color" content="#ffffff">
+  <title>Haushaltsplaner</title>
+</head>
+
+<body>
+  <div id="app" x-data="main">
+    <div class="grid grid-row grid-cols-1 md:grid-cols-5 w-full">
+      <div class="flex flex-wrap justify-center mt-10 grow-3 col-span-3">
+        <template x-for="(r, ri) in ressorts">
+          <div class="card bg-base-100 w-96 shadow-xl px-5 py-10 items-center col-span-1 m-8">
             <p class="mb-5" x-text="r.name">
             </p>
             <template x-if="r.sliders=='default'">
               <div>
-              <input x-model.number="r.cost"
-              type="range" min="0" max="50" value="50" class="range" >  </input>          
-              <div class="badge mt-5">
+                <input x-model.number="r.cost" type="range" min="0" max="50" value="50" class="range"> </input>
+                <div class="badge mt-5">
                   <p x-text="r.cost" class=""></p>
                   <span class="iconify iconoir--coins" style="width: 24px; height: 24px;"></span>
+                </div>
+                <span x-init="watch_slider(r, ri)"></span>
               </div>
-              <span x-init="watch_slider(r, ri)"></span>
-            </div>
-            </template>    
+            </template>
             <template x-if="r.sliders=='rente'">
               <div>
-              <div class="join-vertical">
+                <div class="join-vertical">
 
-                <span class="join-item">Rentenbeitrag</span>
-                <input x-model.number="r.a"
-              type="range" min="0" max="50" value="50" class="range join-item" >  </input> 
-              </div>
-              <div class="join-vertical">
-              <span class="join-item">Rentenauszahlung</span>
-              <progress x-model.number="r.c"
-              type="range" max="100" value="50" class="progress join-item" >  </progress>
-              </div>
-              <div class="join-vertical">
-                <span class="join-item">Staatsbeitrag</span>
-              <input x-model.number="r.b"
-              type="range" min="0" max="50" value="50" class="range join-item" >  </input>   
-              </div>
-              <div class="badge mt-5">
+                  <span class="join-item">Rentenbeitrag</span>
+                  <input x-model.number="r.a" type="range" min="0" max="50" value="50" class="range join-item"> </input>
+                </div>
+                <div class="join-vertical">
+                  <span class="join-item">Rentenauszahlung</span>
+                  <progress x-model.number="r.c" type="range" max="100" value="50" class="progress join-item">
+                  </progress>
+                </div>
+                <div class="join-vertical">
+                  <span class="join-item">Staatsbeitrag</span>
+                  <input x-model.number="r.b" type="range" min="0" max="50" value="50" class="range join-item"> </input>
+                </div>
+                <div class="badge mt-5">
                   <p x-text="r.b" class=""></p>
                   <span class="iconify iconoir--coins" style="width: 24px; height: 24px;"></span>
+                </div>
+                <span x-init="watch_slider(r, ri)"></span>
               </div>
-              <span x-init="watch_slider(r, ri)"></span>
-            </div>
-            </template>  
-        </div>  
-      </template>
-      </div>
-  <div class="grid grid-cols-1 chat grow-1">
-    <template x-for="reaction in groups.flatMap(el=>el.shown_reactions)">
-      <div class="chat chat-startshadow-xl px-5">
-        <div class="chat-bubble">
-        <span :class="groups[reaction.group].icon"></span>
-        <span x-text="reaction.text"></span>
-        </div>
-      </div>
-
-    </template>
-  </div>
-    <div class="mb-20 shadow-xl px-5 py-10 grow-1">
-      <template x-for="group in groups">
-        <div class="my-2">
-          <div class="badge p-4">
-            <span x-text="group.name" class="px-2" ></span>
-            <span :class="group.icon" style="width: 24px; height: 24px;"></span>
-
+            </template>
           </div>
-          <template x-if="group.shown_reactions.length>0">
-            <span class="badge badge-error p-2" x-text="group.shown_reactions.length"></span>
-          </template>
-          <template x-if="group.shown_reactions.length==0">
-            <span class="badge badge-success p-2" x-text="group.shown_reactions.length"></span>
-          </template>
-        </span>
+        </template>
+      </div>
+      <div class="flex flex-col md:col-span-1 grid-row">
+        <template x-for="reaction in groups.flatMap(el=>el.shown_reactions)">
+          <div class="chat chat-start">
+            <div class="chat-image">
+              <span :class="groups[reaction.group].icon"></span>
+            </div>
+            <div class="chat-bubble mt-2">
+              <span x-text="reaction.text"></span>
+            </div>
+          </div>
+        </template>
+      </div>
+      <div class="mb-20 shadow-xl px-10 py-10 col-span-1 grid grid-cols-1 gap-1 grid-row">
+        <template x-for="group in groups">
+          <div class="indicator text-wrap">
+            <div class="container rounded-full border align-center justify-center flex flex-col text-wrap p-4">
+              <span :class="group.icon" style="width: 24px; height: 24px;"></span>
+              <span x-text="group.name" class="text-xs"></span>
+            </div>
+            <template x-if="group.shown_reactions.length>0">
+              <span class="indicator-item badge badge-error p-2" x-text="group.shown_reactions.length"></span>
+            </template>
+            <template x-if="group.shown_reactions.length==0">
+              <span class="indicator-item badge badge-success p-2" x-text="group.shown_reactions.length"></span>
+            </template>
+          </div>
+
+        </template>
       </div>
 
-    </template>
     </div>
 
-    </div>
-    
     <div class="stats shadow fixed bottom-10 left-1/2 transform -translate-x-1/2 sticky">
       <div class="stat place-items-center">
         <div class="stat-title">Ausgaben</div>
@@ -94,9 +97,10 @@
       </div>
       <div class="stat place-items-center">
         <div class="stat-title">Schulden</div>
-        <div class="stat-value" :class="debt > 0 ? 'text-red-500' : 'text-green-500'"  x-text="debt"></div>
+        <div class="stat-value" :class="debt > 0 ? 'text-red-500' : 'text-green-500'" x-text="debt"></div>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
-  </body>
+</body>
+
 </html>

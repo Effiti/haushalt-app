@@ -3,7 +3,7 @@
     {
       "id": 0,
       "name": "Arbeitgeber",
-      "icon": "iconify fluent--people-team-toolbox-24-fille"
+      "icon": "iconify streamline--office-worker-solid"
     },
     {
       "id": 1,
@@ -39,7 +39,7 @@
     {
       "id": 5,
       "name": "Ukraine",
-      "icon": "iconify emojione-v1--flag-for-ukraine"
+      "icon": "iconify-color emojione-v1--flag-for-ukraine"
     },
     
 
