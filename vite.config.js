@@ -1,5 +1,5 @@
-
 import { VitePWA } from 'vite-plugin-pwa';
+import { Mode, plugin as mdPlugin } from "./vite-plugin-markdown-jsx.ts";
 import AutoImport from 'unplugin-auto-import/vite';
 export default {
   plugins: [
@@ -36,10 +36,13 @@ export default {
       dirs: ['./src/**'],
       imports: [
         {
-          'start-dom-jsx': ['h', 'Fragment']
+          'tsx-dom': ['h', 'Fragment']
         }
       ]
-    })
+    }),
+    mdPlugin(
+      {mode: Mode.REACT}
+    )
   ],
   esbuild: {
     jsxFactory: 'h',

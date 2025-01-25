@@ -19,7 +19,8 @@
       <div class="flex flex-wrap justify-center mt-10 grow-3 col-span-3">
         <template x-for="(r, ri) in ressorts">
           <div class="card bg-base-100 w-96 shadow-xl px-5 py-10 items-center col-span-1 m-8">
-            <p class="mb-5" x-text="r.name">
+            <span x-init="r.mount_dialog($el)"></span>
+            <p class="mb-5 font-bold text-lg" x-text="r.name">
             </p>
             <template x-if="r.sliders=='default'">
               <div>
@@ -54,42 +55,46 @@
                 <span x-init="watch_slider(r, ri)"></span>
               </div>
             </template>
+            <span class="btn" @click="r.dialog.showModal()">Info</span>
           </div>
-        </template>
-      </div>
-      <div class="flex flex-col md:col-span-1 grid-row">
-        <template x-for="reaction in groups.flatMap(el=>el.shown_reactions)">
-          <div class="chat chat-start">
-            <div class="chat-image">
-              <span :class="groups[reaction.group].icon"></span>
-            </div>
-            <div class="chat-bubble mt-2">
-              <span x-text="reaction.text"></span>
-            </div>
-          </div>
-        </template>
-      </div>
-      <div class="mb-20 shadow-xl px-10 py-10 col-span-1 grid grid-cols-1 gap-1 grid-row">
-        <template x-for="group in groups">
-          <div class="indicator text-wrap">
-            <div class="container rounded-full border align-center justify-center flex flex-col text-wrap p-4">
-              <span :class="group.icon" style="width: 24px; height: 24px;"></span>
-              <span x-text="group.name" class="text-xs"></span>
-            </div>
-            <template x-if="group.shown_reactions.length>0">
-              <span class="indicator-item badge badge-error p-2" x-text="group.shown_reactions.length"></span>
-            </template>
-            <template x-if="group.shown_reactions.length==0">
-              <span class="indicator-item badge badge-success p-2" x-text="group.shown_reactions.length"></span>
-            </template>
-          </div>
-
         </template>
       </div>
 
+      <div class="flex md:flex-row flex-col col-span-2">
+        <div class="flex flex-col grid-row py-10 grow">
+          <template x-for="reaction in groups.flatMap(el=>el.shown_reactions)">
+            <div class="chat chat-start">
+              <div class="chat-image">
+                <span :class="groups[reaction.group].icon"></span>
+              </div>
+              <div class="chat-bubble mt-2 w-full">
+                <span x-text="reaction.text"></span>
+              </div>
+            </div>
+          </template>
+        </div>
+        <div class="mb-20 shadow-xl md:mr-3 px-4 py-10 grid grid-cols-1 gap-1">
+          <template x-for="group in groups">
+            <div class="indicator text-wrap w-full">
+              <div
+                class="container border-gray-200 bg-gray-100 text-base-content rounded-badge border align-center justify-center flex flex-col text-wrap p-4 w-full ">
+                <span :class="group.icon + ' flex-none'" style="width: 24px; height: 24px;"></span>
+                <span x-text="group.name" class="text-xs shrink"></span>
+              </div>
+              <template x-if="group.shown_reactions.length>0">
+                <span class="indicator-item badge badge-error p-2" x-text="group.shown_reactions.length"></span>
+              </template>
+              <template x-if="group.shown_reactions.length==0">
+                <span class="indicator-item badge badge-success p-2" x-text="group.shown_reactions.length"></span>
+              </template>
+            </div>
+
+          </template>
+        </div>
+
+      </div>
     </div>
-
-    <div class="stats shadow fixed bottom-10 left-1/2 transform -translate-x-1/2 sticky">
+    <div class="stats shadow fixed md:bottom-10 bottom-0 left-1/2 transform -translate-x-1/2 md:w-fit w-full z-10">
       <div class="stat place-items-center">
         <div class="stat-title">Ausgaben</div>
         <div class="stat-value" x-text="spend"></div>

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.26.3",
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.23",
     "postcss": "^8.5.1",
@@ -22,10 +23,13 @@
     "@alpinejs/persist": "^3.14.8",
     "@iconify/json": "^2.2.295",
     "@iconify/tailwind": "^1.2.0",
+    "@mdx-js/rollup": "^3.1.0",
     "@tailwindcss/vite": "^0.0.0-development.1",
     "@types/alpinejs": "^3.13.11",
     "@types/alpinejs__persist": "^3.13.4",
+    "@types/mdx": "^2.0.13",
     "alpinejs": "^3.14.8",
-    "tsx-dom": "^3.0.1"
+    "tsx-dom": "^3.0.1",
+    "vite-plugin-markdown": "^2.2.0"
   }
 }

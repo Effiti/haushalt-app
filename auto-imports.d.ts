@@ -6,8 +6,10 @@
 // biome-ignore lint: disable
 export {}
 declare global {
-  const Fragment: typeof import('start-dom-jsx')['Fragment']
-  const h: typeof import('start-dom-jsx')['h']
+  const Dialog: typeof import('./src/components/Dialog')['default']
+  const Fragment: typeof import('tsx-dom')['Fragment']
+  const components: typeof import('./src/components/index')['components']
+  const h: typeof import('tsx-dom')['h']
   const mount: typeof import('./src/components/index')['mount']
   const setupCounter: typeof import('./src/counter')['setupCounter']
 }
