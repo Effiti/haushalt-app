@@ -24,7 +24,6 @@
     "@alpinejs/persist": "^3.14.8",
     "@iconify/json": "^2.2.295",
     "@iconify/tailwind": "^1.2.0",
-    "@mdx-js/rollup": "^3.1.0",
     "@tailwindcss/vite": "^0.0.0-development.1",
     "@types/alpinejs": "^3.13.11",
     "@types/alpinejs__persist": "^3.13.4",
