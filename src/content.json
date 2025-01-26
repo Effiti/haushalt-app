@@ -84,6 +84,14 @@
     {
       "id": 3,
       "name": "Verteidigung"
+    },
+    {
+      "id": 4,
+      "name": "Umwelt- und Artenschutz"
+    },
+    {
+      "id": 5,
+      "name": "Bildung und Forschung"
     }
   ],
   "reactions": [

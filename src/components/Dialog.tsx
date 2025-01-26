@@ -3,7 +3,7 @@ import { h } from "tsx-dom";
 
 export default function Dialog(props: BaseProps) {
   return (
-    <dialog id="my_modal_3" class="modal">
+    <dialog id="my_modal_3" class="modal prose">
       <div class="modal-box w-11/12 max-w-full">
         <form method="dialog">
           <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
