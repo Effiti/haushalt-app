@@ -18,7 +18,7 @@
     <div class="grid grid-row grid-cols-1 md:grid-cols-5 w-full">
       <div class="flex flex-wrap justify-center mt-10 grow-3 col-span-3">
         <template x-for="(r, ri) in ressorts">
-          <div class="card bg-base-100 w-96 shadow-xl px-5 py-10 items-center col-span-1 m-8">
+          <div class="card bg-base-100 w-96 shadow-xl px-5 py-10 items-center col-span-1 m-8 place-items-center">
             <span x-init="r.mount_dialog($el)"></span>
             <p class="mb-5 font-bold text-lg" x-text="r.name">
             </p>
@@ -75,9 +75,9 @@
         </div>
         <div class="mb-20 shadow-xl md:mr-3 px-4 py-10 grid grid-cols-1 gap-1">
           <template x-for="group in groups">
-            <div class="indicator text-wrap w-full">
+            <div class="indicator text-wrap w-full max-h-fit my-0">
               <div
-                class="container border-gray-200 bg-gray-100 text-base-content rounded-badge border align-center justify-center flex flex-col text-wrap p-4 w-full ">
+                class="container border-gray-200 bg-base-100 text-base-content rounded-badge border align-center justify-center flex flex-col text-wrap p-4 w-full max-h-fit ">
                 <span :class="group.icon + ' flex-none'" style="width: 24px; height: 24px;"></span>
                 <span x-text="group.name" class="text-xs shrink"></span>
               </div>
