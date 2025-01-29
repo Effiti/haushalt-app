@@ -15,7 +15,7 @@ export default {
   plugins: [
     typography,
     daisyui,
-    addIconSelectors(['iconoir', 'material-symbols', 'clarity', 'pajamas', 'proicons', 'emojione-v1', 'game-icons', 'gravity-ui', 'fluent', 'streamline'])
+    addIconSelectors(['iconoir', 'material-symbols', 'clarity', 'pajamas', 'proicons', 'emojione', 'game-icons', 'gravity-ui', 'fluent', 'streamline', 'fa6-solid', 'akar-icons'])
   ],
 }
 

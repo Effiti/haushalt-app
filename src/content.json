@@ -15,7 +15,7 @@
     {
       "id": 2,
       "name": "Junge Bevölkerung",
-      "icon": "iconify material-symbols--work"
+      "icon": "iconify fa6-solid--user-graduate"
     },
     
 
@@ -39,7 +39,7 @@
     {
       "id": 5,
       "name": "Ukraine",
-      "icon": "iconify-color emojione-v1--flag-for-ukraine"
+      "icon": "iconify-color emojione--flag-for-ukraine"
     },
     
 
