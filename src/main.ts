@@ -28,9 +28,6 @@ type Reaction = {
 }
 
 type should_stop_fn_type = (old_cost: number, new_cost: number) => boolean;
-const get_cost = (parts: number[]) => {
-  return parts.length == 1 ? parts[0] : parts[1];
-}
 
 class Ressort {
   id: number = 0;
