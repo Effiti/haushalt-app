@@ -15,6 +15,17 @@
 
 <body>
   <div id="app" x-data="main">
+
+  <div class="navbar sticky bg-base-100 fixed w-full z-20 top-0 start-0 shadow-xl">
+    <div class="mx-auto md:mx-0">
+      <button class="btn flex-row" @click="document.getElementById('startup').showModal()">
+          <span class="iconify akar-icons--info"></span>
+          <span>Anleitung+Infos</span>
+      </button>
+    </div>
+  </div>
+    <span x-init="mount($el,'startup')">
+    </span>
     <div class="grid grid-row grid-cols-1 md:grid-cols-5 w-full mb-10">
       <div class="flex flex-wrap justify-center mt-10 grow-3 col-span-3 mr-0">
         <template x-for="(r, ri) in ressorts">

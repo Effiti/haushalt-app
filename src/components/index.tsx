@@ -1,5 +1,6 @@
 import { h } from 'tsx-dom';
 import Dialog from './Dialog.tsx';
+import StartupDialog from './StartupDialog.tsx';
 //@ts-ignore
 import { ReactComponent as Verteidigung } from "./texts/verteidigung.md"
 //@ts-ignore
@@ -16,8 +17,11 @@ import { ReactComponent as Rente } from "./texts/rente.md"
 import { ReactComponent as Infrastruktur } from "./texts/infrastruktur.md"
 //@ts-ignore
 import { ReactComponent as Digitalisierung } from "./texts/digitalisierung.md"
+//@ts-ignore
+import { ReactComponent as Startup } from "./texts/startup.md"
 
 const wrap = (C: () => JSX.Element) => <Dialog><C></C></Dialog>
+const wrapStartup = (C: () => JSX.Element) => <StartupDialog><C></C></StartupDialog>
 
 export const components = {
   0: wrap(Rente),
@@ -27,12 +31,14 @@ export const components = {
   4: wrap(Umwelt),
   5: wrap(Forschung),
   7: wrap(Digitalisierung),
+  startup: wrapStartup(Startup),
   default: wrap(Sample)
 };
 
-export const mount = (target: HTMLElement, name: string) => {
+export const mount = (target: HTMLElement, name: string | number) => {
   //@ts-ignore
-  let el = (components[name]()) as HTMLElement;
-  console.log(el);
-  target.innerHTML = el.outerHTML;
+  console.log(components, name, components[name]);
+  //@ts-ignore
+  let el = (components[name]) as HTMLElement;
+  target.replaceWith(el);
 }

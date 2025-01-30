@@ -1,4 +1,4 @@
-import { components } from "./components";
+import { components, mount } from "./components";
 import Alpine from 'alpinejs';
 import "./app.css";
 import obj from "./content.json" with { "type": "json" };
@@ -66,7 +66,7 @@ class Ressort {
       ////RECURSION
       return;
     }
-    this.parts.length == 1 ? this.parts[0] = a : this.parts[1] = a;
+    this.parts.length == 1 ? this.a = a : this.b = a;
   }
 
   get a() {
@@ -92,6 +92,17 @@ class Ressort {
 
 
 }
+
+function docReady(fn: Function) {
+    // see if DOM is already available
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        // call on next available tick
+        setTimeout(fn, 1);
+    } else {
+        //@ts-ignore
+        document.addEventListener("DOMContentLoaded", fn);
+    }
+}    
 
 class Group {
   shown_reactions: Reaction[] = [];
@@ -135,6 +146,8 @@ Alpine.data("main", function() {
       return new Ressort(el, obj.should_stop_update.bind(obj))
   }
   return {
+    mount: mount,
+    has_been_here: Alpine.$persist(false), 
     should_stop_update(old_cost: number, new_cost: number) {
         if(!this.schulden_bremse) return false;
         console.log(old_cost, new_cost);
@@ -145,6 +158,11 @@ Alpine.data("main", function() {
         return debt_after_update>SCHULDEN_BREMSE;
     },
     init() {
+      if(!this.has_been_here) {
+        this.has_been_here = true;
+        //@ts-ignore
+        docReady(()=>document.getElementById("startup").showModal());
+      }
       //@ts-ignore
       this.ressorts = obj.ressorts.map(create_ressort(this));
     },

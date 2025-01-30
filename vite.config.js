@@ -1,6 +1,7 @@
 import { VitePWA } from 'vite-plugin-pwa';
 import { Mode, plugin as mdPlugin } from "./vite-plugin-markdown-jsx.ts";
 import AutoImport from 'unplugin-auto-import/vite';
+import { rollupVersion } from 'vite';
 export default {
   plugins: [
     VitePWA({
