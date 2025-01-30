@@ -1,2 +1,13 @@
 # Infrastruktur
-Die Infrastruktur beschreibt die Versorgungsfestig- und fähigkeit deines Landes. Das bedeutet, je mehr du für die Infrastruktur ausgibst, desto besser sind staatliche Organ, Firmen und Hersteller in der Lage Waren zu transportieren, was die Wirtschaft deutlich stärkt. Eine bessere Infrastruktur macht dein Land attraktiver für Firmen aus dem Ausland und lässt dich Waren schneller liefern. Momentan ist die Infrastruktur Deutschland in einem maroden Zustand: Brücken brechen zusammen, die Autobahnen sind voller Risse und Baustellen brauchen Jahre um fertiggestellt zu werden. 
+Unter dem Begriff „Infrastruktur“ werden staatliche und private
+Einrichtungen zusammengefasst, die für eine ausreichende
+Daseinsvorsorge und wirtschaftliche Entwicklung als erforderlich gelten.
+Innerhalb dieser Einrichtungen kann man die Infrastruktur zusätzlich in
+zwei verschiedene Spaten einteilen. Zum Einen gibt es die technische
+(Einrichtungen der Verkehrs-/Nachrichtenübermittlung) und zum Anderen
+die soziale Infrastruktur (Schulen, Krankenhäuser,...). Zusammengefasst
+beschreibt dieser Begriff die Grundausstattung einer Volkswirtschaft. Am
+meisten Geld wird hier in die regionale Infrastruktur (Verkehr) investiert. Es
+lohnt sich außerdem, Investitionen in der technischen Infrastruktur
+vorzunehmen, da aufgrund des Bevölkerungswachstums ein höheres
+Verkehrsaufkommen und mehr Wasserverbrauch anzunehmen sind.
