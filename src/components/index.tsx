@@ -10,10 +10,16 @@ import { ReactComponent as Sample } from "./texts/sample.md"
 import { ReactComponent as Forschung } from "./texts/forschung.md"
 //@ts-ignore
 import { ReactComponent as Integration } from "./texts/integration.md"
+//@ts-ignore
+import { ReactComponent as Rente } from "./texts/rente.md"
+//@ts-ignore
+import { ReactComponent as Infrastruktur } from "./texts/infrastruktur.md"
 
 const wrap = (C: () => JSX.Element) => <Dialog><C></C></Dialog>
 
 export const components = {
+  0: wrap(Rente),
+  1: wrap(Infrastruktur),
   2: wrap(Integration),
   3: wrap(Verteidigung),
   4: wrap(Umwelt),

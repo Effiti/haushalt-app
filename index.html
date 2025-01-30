@@ -15,7 +15,7 @@
 
 <body>
   <div id="app" x-data="main">
-    <div class="grid grid-row grid-cols-1 md:grid-cols-5 w-full">
+    <div class="grid grid-row grid-cols-1 md:grid-cols-5 w-full mb-10">
       <div class="flex flex-wrap justify-center mt-10 grow-3 col-span-3">
         <template x-for="(r, ri) in ressorts">
           <div class="card bg-base-100 w-96 shadow-xl px-5 py-10 items-center col-span-1 m-8 place-items-center">
@@ -58,7 +58,7 @@
               </div>
             </template>
             <button class="btn" @click="r.dialog.showModal()"><span
-                class="iconify akar-icons--info"></span>Info</button>
+                class="iconify akar-icons--info" style="width: 24px; height: 24px;"></span>Info</button>
           </div>
         </template>
       </div>
@@ -97,7 +97,7 @@
 
       </div>
     </div>
-    <div class="stats shadow fixed md:bottom-10 bottom-0 left-1/2 transform -translate-x-1/2 md:w-fit w-full z-10">
+    <div class="stats shadow sticky md:bottom-10 bottom-0 left-1/2 transform -translate-x-1/2 md:w-fit w-full z-10">
       <div class="stat place-items-center">
         <div class="stat-title">Ausgaben</div>
         <div class="stat-value" x-text="spend"></div>

@@ -132,8 +132,8 @@ Alpine.data("main", function() {
   console.log(obj.ressorts.length);
   const create_ressort = (obj: {should_stop_update: should_stop_fn_type}) => function(el: Ressort_) {
       //@ts-ignore
-      return new Ressort(el, this.should_stop_update.bind(obj))
-  }.bind(obj);
+      return new Ressort(el, obj.should_stop_update.bind(obj))
+  }
   return {
     should_stop_update(old_cost: number, new_cost: number) {
         if(!this.schulden_bremse) return false;
