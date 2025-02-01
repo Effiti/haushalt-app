@@ -19,8 +19,12 @@ import { ReactComponent as Infrastruktur } from "./texts/infrastruktur.md"
 import { ReactComponent as Digitalisierung } from "./texts/digitalisierung.md"
 //@ts-ignore
 import { ReactComponent as Startup } from "./texts/startup.md"
+//@ts-ignore
+import { ReactComponent as Bremse } from "./texts/bremse.md"
+//@ts-ignore
+import { ReactComponent as Schulden } from "./texts/schulden.md"
 
-const wrap = (C: () => JSX.Element) => <Dialog><C></C></Dialog>
+const wrap = (C: () => JSX.Element, id?:string) => <Dialog id={id}><C></C></Dialog>
 const wrapStartup = (C: () => JSX.Element) => <StartupDialog><C></C></StartupDialog>
 
 export const components = {
@@ -32,6 +36,8 @@ export const components = {
   5: wrap(Forschung),
   7: wrap(Digitalisierung),
   startup: wrapStartup(Startup),
+  bremse: wrap(Bremse, "bremse"),
+  schulden: wrap(Schulden, "schulden"),
   default: wrap(Sample)
 };
 

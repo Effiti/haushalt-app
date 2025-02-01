@@ -26,6 +26,10 @@
   </div>
     <span x-init="mount($el,'startup')">
     </span>
+    <span x-init="mount($el,'bremse')">
+    </span>
+    <span x-init="mount($el,'schulden')">
+    </span>
     <div class="grid grid-row grid-cols-1 md:grid-cols-5 w-full mb-10">
       <div class="flex flex-wrap justify-center mt-10 grow-3 col-span-3 mr-0">
         <template x-for="(r, ri) in ressorts">
@@ -115,14 +119,29 @@
         <div class="stat-desc">Von 500</div>
       </div>
       <div class="stat place-items-center">
-        <div class="stat-title">Schulden</div>
-        <div class="stat-value" :class="debt > 0 ? 'text-red-500' : 'text-green-500'" x-text="debt"></div>
+        <div class="stat-title">
+          Schulden
+
+        </div>
+        <div class="stat-value">
+        <span :class="debt > 0 ? 'text-red-500' : 'text-green-500'" x-text="debt">
+        </span>
+         <span class="iconify akar-icons--info" @click="show('schulden')"></span>
+        </div>
+        
         <div class="stat-desc"></div>
       </div>
       <div class="stat place-items-center">
-        <div class="stat-title text-wrap">Schuldenbremse</div>
-        <div class="stat-value"> <input x-model.boolean="schulden_bremse" :disabled="!allow_bremse" type="checkbox"
-            class="toggle toggle-lg"></span> </div>
+        <div class="stat-title text-wrap ">
+        Schuldenbremse
+        </div>
+        <div class="stat-value">
+         <input x-model.boolean="schulden_bremse" :disabled="!allow_bremse" type="checkbox"
+                      class="toggle toggle-lg">
+         </input>
+
+         <span class="iconify akar-icons--info" @click="show('bremse')"></span>
+        </div>
       </div>
 
     </div>

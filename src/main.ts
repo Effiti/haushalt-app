@@ -147,6 +147,10 @@ Alpine.data("main", function() {
   }
   return {
     mount: mount,
+    show(id: string) {
+      //@ts-ignore
+      document.getElementById(id).showModal();
+    },
     has_been_here: Alpine.$persist(false), 
     should_stop_update(old_cost: number, new_cost: number) {
         if(!this.schulden_bremse) return false;
