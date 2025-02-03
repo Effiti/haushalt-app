@@ -17,6 +17,7 @@ export default {
     daisyui,
     addIconSelectors(
       [
+        'circle-flags',
         'iconoir',
         'material-symbols',
         'clarity',

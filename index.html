@@ -56,12 +56,12 @@
                   </input>
                 </div>
                 <div class="join-vertical">
-                  <span class="join-item">Rentenauszahlung</span>
+                  <span class="join-item">Rentensatz</span>
                   <progress x-model.number="r.c" type="range" max="200" value="50" class="progress join-item">
                   </progress>
                 </div>
                 <div class="join-vertical">
-                  <span class="join-item">Staatsbeitrag</span>
+                  <span class="join-item">Staatszuschuss</span>
                   <input x-model.number="r.cost" type="range" min="0" max="100" value="50" class="range join-item">
                   </input>
                 </div>
@@ -78,8 +78,8 @@
         </template>
       </div>
 
-      <div class="flex lg:flex-row flex-col col-span-2">
-        <div class="flex flex-col grid-row py-10 lg:grow">
+      <div class="flex xl:flex-row flex-col col-span-2">
+        <div class="flex flex-col grid-row py-10 xl:grow">
           <template x-for="reaction in groups.flatMap(el=>el.shown_reactions)">
             <div class="chat chat-start">
               <div class="chat-image">
@@ -123,7 +123,7 @@
           Schulden
 
         </div>
-        <div class="stat-value">
+        <div class="stat-value inline">
         <span :class="debt > 0 ? 'text-red-500' : 'text-green-500'" x-text="debt">
         </span>
          <span class="iconify akar-icons--info" @click="show('schulden')"></span>
@@ -141,6 +141,10 @@
          </input>
 
          <span class="iconify akar-icons--info" @click="show('bremse')"></span>
+        </div>
+        <div class="stat-desc flex">
+          <button @click="bremse_type='eu'" class="iconify-color circle-flags--eu mr-5 border-accent rounded-full" :class="bremse_type=='eu'?'border-2':''" style="width: 24px; height: 24px;"></button>
+          <button @click="bremse_type='de'" class="iconify-color circle-flags--de border-accent rounded-full" :class="bremse_type=='de'?'border-2':''" style="width: 24px; height: 24px;"></button>
         </div>
       </div>
 

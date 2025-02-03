@@ -5,8 +5,6 @@ import obj from "./content.json" with { "type": "json" };
 import persist from '@alpinejs/persist'
 
 const MAX_SPEND = 500;
-// Maximum divergence from the MAX_SPEND allowed under Schuldenbremse
-const SCHULDEN_BREMSE = 15;
 
 obj.groups = obj.groups.sort((a, b) => a.id - b.id);
 obj.ressorts = obj.ressorts.sort((a, b) => a.id - b.id);
@@ -38,7 +36,6 @@ class Ressort {
   should_stop: should_stop_fn_type;
 
   constructor(base: Ressort_, should_stop_fn: should_stop_fn_type) {
-    console.log(should_stop_fn);
     this.should_stop = should_stop_fn;
     this.id = base.id;
     this.name = base.name;
@@ -59,14 +56,14 @@ class Ressort {
   }
 
   get cost() {
-    return this.parts.length == 1 ? this.parts[0] : this.parts[1];
+    return this.sliders == "default" ? this.parts[0] : this.parts[1];
   }
   set cost(a: number) {
     if (this.should_stop(this.cost, a)) {
       ////RECURSION
       return;
     }
-    this.parts.length == 1 ? this.a = a : this.b = a;
+    this.sliders == "default" ? this.a = a : this.b = a;
   }
 
   get a() {
@@ -156,10 +153,10 @@ Alpine.data("main", function() {
         if(!this.schulden_bremse) return false;
         console.log(old_cost, new_cost);
         if(old_cost>new_cost) return false;
-        if(this.debt>= SCHULDEN_BREMSE) return true;
+        if(this.debt>= this.bremse_level) return true;
         let debt_after_update = (this.spend - MAX_SPEND - old_cost + new_cost);
         console.log(debt_after_update);
-        return debt_after_update>SCHULDEN_BREMSE;
+        return debt_after_update>this.bremse_level;
     },
     init() {
       if(!this.has_been_here) {
@@ -177,8 +174,14 @@ Alpine.data("main", function() {
 
     schulden_bremse: false,
 
+    bremse_type: "de",
+
+    get bremse_level() {
+      return this.bremse_type == "de" ? 30 : 260;
+    },
+
     get allow_bremse() {
-      return this.schulden_bremse || this.debt <= SCHULDEN_BREMSE;
+      return this.schulden_bremse || this.debt <= this.bremse_level;
     },
 
     get spend() {
