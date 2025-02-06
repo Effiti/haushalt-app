@@ -1,6 +1,8 @@
 import { VitePWA } from 'vite-plugin-pwa';
 import { Mode, plugin as mdPlugin } from "./vite-plugin-markdown-jsx.ts";
 import AutoImport from 'unplugin-auto-import/vite';
+import MarkdownIt from "markdown-it";
+import Footnotes from "markdown-it-footnote";
 import { rollupVersion } from 'vite';
 export default {
   plugins: [
@@ -42,7 +44,10 @@ export default {
       ]
     }),
     mdPlugin(
-      {mode: Mode.REACT}
+      {
+        mode: Mode.REACT,
+        markdownIt: MarkdownIt().use(Footnotes)
+      }
     )
   ],
   esbuild: {

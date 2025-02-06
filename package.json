@@ -29,6 +29,8 @@
     "@types/alpinejs__persist": "^3.13.4",
     "@types/mdx": "^2.0.13",
     "alpinejs": "^3.14.8",
+    "markdown-it": "^14.1.0",
+    "markdown-it-footnote": "^4.0.0",
     "tsx-dom": "^3.0.1",
     "vite-plugin-markdown": "^2.2.0"
   }
