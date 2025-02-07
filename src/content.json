@@ -39,7 +39,7 @@
     {
       "id": 5,
       "name": "Ukraine",
-      "icon": "iconify-color circle-flags--lang-uk"
+      "icon": "iconify-color circle-flags--ua"
     },
     
 
@@ -64,6 +64,11 @@
       "id": 8,
       "name": "Arbeitnehmende",
       "icon": "iconify gravity-ui--person-worker"
+    },
+    {
+      "id": 9,
+      "name": "Rentenbeziehende",
+      "icon": "iconify mdi--human-cane"
     }
     
   ],
@@ -243,7 +248,16 @@
       "ressort": 2,
       "type": -1,
       "threshold": 31,
-      "text": "Die deutsche Wirtschaft profitiert von qualifizierten ausländischen Fachkräften "
+      "text": "Die deutsche Wirtschaft profitiert von qualifizierten ausländischen Fachkräften"
+    },
+    {
+     "id": 15,
+     "group": 9,
+     "ressort": 0,
+     "type": -1,
+     "threshold": 200,
+     "text": "Die ältere Bevölkerung hat über Jahrzente in das Rentensystem eingezahlt und verdient jetzt einen Menschenwürdigen Lebensunterhalt",
+     "part": 2
     }
   ]
 }

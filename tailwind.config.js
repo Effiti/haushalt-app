@@ -30,7 +30,8 @@ export default {
         'streamline', 
         'fa6-solid', 
         'akar-icons',
-        'heroicons'
+        'heroicons',
+        "mdi"
       ])
   ],
 }

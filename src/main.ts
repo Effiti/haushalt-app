@@ -14,6 +14,7 @@ type Ressort_ = {
   name: string,
   id: number,
   sliders?: string | undefined,
+  max: number
 };
 type Reaction = {
   group: number,
@@ -33,12 +34,14 @@ class Ressort {
   parts: number[] = [25, 25, 50];
   sliders: string = "";
   dialog: HTMLElement;
+  max: number;
   should_stop: should_stop_fn_type;
 
   constructor(base: Ressort_, should_stop_fn: should_stop_fn_type) {
     this.should_stop = should_stop_fn;
     this.id = base.id;
     this.name = base.name;
+    this.max = base.max;
     this.dialog = base.id in components
       //@ts-ignore
       ? components[base.id] as HTMLElement

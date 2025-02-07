@@ -39,7 +39,7 @@
             </p>
             <template x-if="r.sliders=='default'">
               <div>
-                <input x-model.number="r.cost" type="range" min="0" max="100" value="50" class="range"> </input>
+                <input x-model.number="r.cost" type="range" min="0" :max="r.max" value="50" class="range"> </input>
                 <div class="badge mt-5">
                   <p x-text="r.cost" class=""></p>
                   <span class="iconify iconoir--coins" style="width: 24px; height: 24px;"></span>
@@ -57,12 +57,12 @@
                 </div>
                 <div class="join-vertical">
                   <span class="join-item">Rentensatz</span>
-                  <progress x-model.number="r.c" type="range" max="200" value="50" class="progress join-item">
+                  <progress x-model.number="r.c" type="range" :max="r.max+100" value="50" class="progress join-item">
                   </progress>
                 </div>
                 <div class="join-vertical">
                   <span class="join-item">Staatszuschuss</span>
-                  <input x-model.number="r.cost" type="range" min="0" max="100" value="50" class="range join-item">
+                  <input x-model.number="r.cost" type="range" min="0" :max="r.max" value="50" class="range join-item">
                   </input>
                 </div>
                 <div class="badge mt-5">
