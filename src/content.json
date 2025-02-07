@@ -71,35 +71,44 @@
     {
       "id": 0,
       "name": "Rente",
-      "sliders": "rente"
+      "sliders": "rente",
+      "max": 250
     },
     {
       "id": 1,
-      "name" : "Infrastruktur"
+      "name" : "Infrastruktur",
+      "max": 100
     },
     {
       "id": 2,
-      "name": "Migration/Integration"
+      "name": "Migration/Integration",
+      "max": 100
     },
     {
       "id": 3,
-      "name": "Verteidigung"
+      "name": "Verteidigung",
+      "max": 150
+      "
     },
     {
       "id": 4,
-      "name": "Umwelt- und Artenschutz"
+      "name": "Umwelt- und Artenschutz",
+      "max": 50
     },
     {
       "id": 5,
-      "name": "Bildung und Forschung"
+      "name": "Bildung und Forschung",
+      "max": 100
     },
     {
       "id": 6,
-      "name": "Staatsinvestitionen"
+      "name": "Staatsinvestitionen",
+      "max": 120
     },
     {
       "id": 7,
-      "name": "Digitalisierung"
+      "name": "Digitalisierung",
+      "max": 50
     }
   ],
   "reactions": [
@@ -108,7 +117,7 @@
       "group": 1,
       "ressort": 4,
       "type": -1,
-      "threshold": 30,
+      "threshold": 25,
       "text": "Uns ist Umwelt- und Artenschutz wichtig. Es ist das wichtigste Problem der modernen Welt"
     },
 
@@ -117,7 +126,7 @@
       "group": 2,
       "ressort": 4,
       "type": -1,
-      "threshold": 30,
+      "threshold": 18,
       "text": "Wir wollen unsere Zukunft auf einem gesunden Planeten erleben"
     },
 
@@ -126,7 +135,7 @@
       "group": 3,
       "ressort": 4,
       "type": 1,
-      "threshold": 30,
+      "threshold": 15,
       "text": "Übermäßiger Umwelt- und Arternschutz schränkt das Potential der deutschen Industrie auf dem Weltmarkt massiv ein"
     },
 
@@ -135,7 +144,7 @@
       "group": 2,
       "ressort": 5,
       "type": -1,
-      "threshold": 30,
+      "threshold": 62,
       "text": "Für die qualifizierten Arbeitskräfte von morgen ist hochwertige Bildung sehr wichtig"
     },
 
@@ -144,7 +153,7 @@
       "group": 4,
       "ressort": 5,
       "type": -1,
-      "threshold": 30,
+      "threshold": 60,
       "text": "Deutschland muss als Wissenschaftsstandort global mithalten, um sich durch internationale Innovationen weiterzuentwickeln"
     },
 
@@ -153,7 +162,7 @@
       "group": 5,
       "ressort": 3,
       "type": -1,
-      "threshold": 30,
+      "threshold": 123,
       "text": "Deutschland muss wehrhaft sein, um die Demokratie in Europa zu verteidigen. Dazu zählt auch, die Verteidigung der Ukraine"
     },
 
@@ -162,7 +171,7 @@
       "group": 6,
       "ressort": 3,
       "type": 1,
-      "threshold": 30,
+      "threshold": 35,
       "text": "Die weitere Aufrüstung Deutschlands stellt eine Gefahr für den globalen Frieden dar"
     },
 
@@ -171,8 +180,8 @@
       "group": 3,
       "ressort": 6,
       "type": -1,
-      "threshold": 30,
-      "text": "In einer Phase der Rezession ist die deutsche Industrie auf staatliche Inverstitionen angewiesen um global mitzuhalten"
+      "threshold": 100,
+      "text": "In einer Phase der Rezession ist die deutsche Industrie auf staatliche Investitionen angewiesen um global mitzuhalten"
     },
 
     {
@@ -180,7 +189,7 @@
       "group": 7,
       "ressort": 6,
       "type": -1,
-      "threshold": 30,
+      "threshold": 50,
       "text": "Die deutsche Wirtschaft muss staatlich unterstützt werden, um Arbeitsplätze zu schaffen"
     },
 
@@ -189,7 +198,7 @@
       "group": 3,
       "ressort": 1,
       "type": -1,
-      "threshold": 30,
+      "threshold": 69,
       "text": "Ein bedeutender Standortfaktor für die Industrie in Deutschland ist eine gut ausgebaute Infrastruktur"
     },
 
@@ -198,7 +207,7 @@
       "group": 2,
       "ressort": 1,
       "type": -1,
-      "threshold": 30,
+      "threshold": 72,
       "text": "Die nächsten Generationen sollen nicht die marode Infrastruktur von gestern erben"
     },
 
@@ -207,7 +216,7 @@
       "group": 8,
       "ressort": 7,
       "type": 1,
-      "threshold": 30,
+      "threshold": 13,
       "text": "Digitalisierung führt zum Abbau vieler Stellen in der deutschen Wirtschaft"
     },
 
@@ -216,7 +225,7 @@
       "group": 4,
       "ressort": 7,
       "type": -1,
-      "threshold": 30,
+      "threshold": 22,
       "text": "Der technologische Fortschritt gibt uns die Möglichkeit, Leben in Zukunft effizienter und produktiver zu gestalten. Digitalisierung ist die Umsetzung dieses Fortschritts in die Praxis"
     },
 
@@ -225,7 +234,7 @@
       "group": 8,
       "ressort": 2,
       "type": 1,
-      "threshold": 30,
+      "threshold": 12,
       "text": "Übermäßige Migration erschwert die Sache nach gut bezahlter Arbeit"
     },
 
@@ -234,7 +243,7 @@
       "group": 0,
       "ressort": 2,
       "type": -1,
-      "threshold": 30,
+      "threshold": 31,
       "text": "Die deutsche Wirtschaft profitiert von qualifizierten ausländischen Fachkräften "
     }
   ]
