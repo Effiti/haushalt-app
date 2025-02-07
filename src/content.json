@@ -258,6 +258,15 @@
      "threshold": 200,
      "text": "Die ältere Bevölkerung hat über Jahrzente in das Rentensystem eingezahlt und verdient jetzt einen Menschenwürdigen Lebensunterhalt",
      "part": 2
+    },
+    {
+     "id": 16,
+     "group": 2,
+     "ressort": 0,
+     "type": 1,
+     "threshold": 50,
+     "text": "Die jüngere Bevölkerung kann nicht den Lebensunterhalt der deutlich größeren älteren Bevölkerung tragen",
+     "part": 0
     }
   ]
 }
