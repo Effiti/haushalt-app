@@ -3,27 +3,27 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Plane Deinen eigenen Staatshaushalt!">
-  <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-  <link rel="mask-icon" href="/mask-icon.svg" color="#FFFFFF">
-  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <title>Haushaltsplaner</title>
 </head>
 
 <body>
   <div id="app" x-data="main">
 
-  <div class="navbar sticky bg-base-100 fixed w-full z-20 top-0 start-0 shadow-xl">
-    <div class="mx-auto md:mx-0">
-      <button class="btn flex-row" @click="document.getElementById('startup').showModal()">
+    <div class="navbar sticky bg-base-100 fixed w-full z-20 top-0 start-0 shadow-xl">
+      <div class="mx-auto md:mx-0">
+        <button class="btn flex-row" @click="document.getElementById('startup').showModal()">
           <span class="iconify akar-icons--info"></span>
           <span>Anleitung+Infos</span>
-      </button>
+        </button>
+      </div>
     </div>
-  </div>
     <span x-init="mount($el,'startup')">
     </span>
     <span x-init="mount($el,'bremse')">
@@ -72,8 +72,8 @@
                 <span x-init="watch_slider(r, ri)"></span>
               </div>
             </template>
-            <button class="btn" @click="r.dialog.showModal()"><span
-                class="iconify akar-icons--info" style="width: 24px; height: 24px;"></span>Info</button>
+            <button class="btn" @click="r.dialog.showModal()"><span class="iconify akar-icons--info"
+                style="width: 24px; height: 24px;"></span>Info</button>
           </div>
         </template>
       </div>
@@ -112,7 +112,8 @@
 
       </div>
     </div>
-    <div class="stats shadow fixed md:sticky md:bottom-10 bottom-0 left-1/2 transform -translate-x-1/2 md:w-fit w-screen z-10">
+    <div
+      class="stats shadow fixed md:sticky md:bottom-10 bottom-0 left-1/2 transform -translate-x-1/2 md:w-fit w-screen z-10">
       <div class="stat place-items-center">
         <div class="stat-title">Ausgaben</div>
         <div class="stat-value" x-text="spend"></div>
@@ -124,27 +125,28 @@
 
         </div>
         <div class="stat-value inline">
-        <span :class="debt > 0 ? 'text-red-500' : 'text-green-500'" x-text="debt">
-        </span>
-         <span class="iconify akar-icons--info" @click="show('schulden')"></span>
+          <span :class="debt > 0 ? 'text-red-500' : 'text-green-500'" x-text="debt">
+          </span>
+          <span class="iconify akar-icons--info" @click="show('schulden')"></span>
         </div>
-        
+
         <div class="stat-desc"></div>
       </div>
       <div class="stat place-items-center">
         <div class="stat-title text-wrap ">
-        Schuldenbremse
+          Schuldenbremse
         </div>
         <div class="stat-value">
-         <input x-model.boolean="schulden_bremse" :disabled="!allow_bremse" type="checkbox"
-                      class="toggle toggle-lg">
-         </input>
+          <input x-model.boolean="schulden_bremse" :disabled="!allow_bremse" type="checkbox" class="toggle toggle-lg">
+          </input>
 
-         <span class="iconify akar-icons--info" @click="show('bremse')"></span>
+          <span class="iconify akar-icons--info" @click="show('bremse')"></span>
         </div>
         <div class="stat-desc flex">
-          <button @click="bremse_type='eu'" class="iconify-color circle-flags--eu mr-5 border-accent rounded-full" :class="bremse_type=='eu'?'border-2':''" style="width: 24px; height: 24px;"></button>
-          <button @click="bremse_type='de'" class="iconify-color circle-flags--de border-accent rounded-full" :class="bremse_type=='de'?'border-2':''" style="width: 24px; height: 24px;"></button>
+          <button @click="bremse_type='eu'" class="iconify-color circle-flags--eu mr-5 border-accent rounded-full"
+            :class="bremse_type=='eu'?'border-2':''" style="width: 24px; height: 24px;"></button>
+          <button @click="bremse_type='de'" class="iconify-color circle-flags--de border-accent rounded-full"
+            :class="bremse_type=='de'?'border-2':''" style="width: 24px; height: 24px;"></button>
         </div>
       </div>
 

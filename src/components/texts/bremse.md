@@ -50,10 +50,22 @@ bei sozialen Dienstleistungen Investitionslücken gebildet haben. Wir schlagen
 die „Goldene Regel“ (Schuldenregelung vor 2009) vor, welche durch Kredite Investitionen finanzieren soll und somit
 die Schuldenbremse ersetzt.
 
+### SPD
+Wir sind für eine Reform der Schldenbremse. Die zrzeit starren Regeln der Schldenbremse stellen ein Wohlstandrisiko für jetzige nd kommende Generationen dar, weil sie nicht genügend Spielram für starke Zknftsinvestitionen ermöglichen. Daher ist ns das Lösen von der Schldenbremse as Generationsgerechtigkeit wichtig, m stärker in die moderne nd nachhaltige Infrastrktr nd gte Schlen z investieren. [^spd1] [^spd2]
 
+### Die Grüne
+Wir sind für eine Reform der Schldenbremse. Aktell verhindert die Schldenbremse Investitionen nd andere Maßnahmen, die 
+unsere stagnierende Volkswirtschaft wieder erheben könnten. Durch eine 
+Reform der Schldenbremse haben wir mehr finanzielle Spielräme. Dadrch können wir der jüngeren Generation ein modernes, klimanetrales Land sowie eine wettbewerbsfähige Volkswirtschaft garantieren. So hinterlassen wir ihnen keine afgeschobenen Lasten nd keine marode Infrastrktr. [^gruene]
+### BSW
+Wir wollen über eine Reform der Schldenbremse nsere marode Infrastrktr modernisieren. Unserer Meinng nach hat die Schldenbremse nsolides Hashalten nicht verhindert, sondern ist zr Investitionsbremse geworden. Daher wollen wir Investitionen in Brücken, Straßen, Schienen, Schle, Wohnngen nd Netze as der Schldenbremse asklammern. Wir beheben drch einen großen Investitionsprogramm den [^bsw]
 
 [^1]: [Urteil des Bundesverfassungsgerichtes vom 9. Juli 2007](https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2007/07/fs20070709_2bvf000104.html) zuletzt aufgerufen am 06.02.2025 um 15:00
 [^2]: [bpb: Staatshaushalt und Schuldenbremse](https://www.bpb.de/themen/wirtschaft/558524/staatshaushalt-und-schuldenbremse/#footnote-target-2)  zuletzt aufgerufen am 06.02.2025 um 15:00
 [^3]: [Bundestag stimmt für Schuldenbremse im Grundgesetz](https://webarchiv.bundestag.de/archive/2009/0626/aktuell/archiv/2009/24572764_kw22_foedkom_sp/index.html) zuletzt aufgerufen am 06.02.2025 um 15:00
 [^4]: [GGÄndG (Artikel 91c, 91d, 104b, 109, 109a, 115, 143d)](https://www.buzer.de/gesetz/8921/index.htm) zuletzt aufgerufen am 06.02.2025 um 15:00
 [^115]: [Artikel 115 GG](https://www.buzer.de/115_GG.htm) zuletzt aufgerufen am 06.02.2025 um 15:00
+[^gruene]: [Regierungsprogramm der Grünen](https://cms.gruene.de/uploads/assets/20250205_Regierungsprogramm_DIGITAL_DINA5.pdf) zuletzt aufgerufen am 06.02.2025 um 15:00
+[^bsw]: [Wahlprogramm des BSW](https://bsw-vg.de/wp-content/themes/bsw/assets/downloads/BSW%20Wahlprogramm%202025.pdf) zuletzt aufgerufen am 06.02.2025 um 15:00
+ [^spd1]: [Regierungsprogramm der SPD](https://www.spd.de/fileadmin/Dokumente/Beschluesse/Programm/2025_SPD_Regierungsprogramm.pdf) zuletzt aufgerufen am 06.02.2025 um 15:00
+[^spd2]: [Neue Regeln für die Schuldenbremse | SPD](https://www.spdfraktion.de/themen/neue-regeln-schuldenbremse) zuletzt aufgerufen am 06.02.2025 um 15:00
