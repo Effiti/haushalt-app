@@ -10,8 +10,7 @@ Nachdem ein Urteil des Bundesverfassungsgerichtes[^1] 2007 ein Ausformulieren de
 stimmte der Bundestag am 29.5.2009 mit einer Zwei-Drittelmehrheit für eine Änderung des Grundgesetzes. Mit den Stimmen der Regierungsparteien CDU und SPD wurden hauptsächlich die Artikel 109 und 115 des Grundgesetzes geändert.[^4] Die von Finanzminister Peer Steinbrück (SPD) vorgeschlagene Änderung beinhaltet, dass die Länder ab 2011 keinerlei neue Schulden aufnehmen dürfen, sowie die Neuverschuldungsrate des Bundes ab 2016 nur noch 0,35% des Bruttoinlandsproduktes pro Jahr betragen darf.[^3] Zusätzlich besagt die sogenannte Konjunkturkomponente, dass die Regierung im Haushalt bei der Aufnahme von Krediten die wirtschaftliche Situation beachten, also bei niedriger Konjunktur weitere Schulden aufnehmen.[^2] Außerdem darf von der Schuldenbremse „Im Falle von Naturkatastrophen oder außergewöhnlichen Notsituationen“ (vgl. Art. 115 GG, Absatz 2, Satz 6) abgesehen werden, wenn der Bundestag dafür stimmt. In diesem Fall muss jedoch ein Plan vorliegen, nach dem die Kredite innerhalb eines angemessenen Zeitraums zurück geführt werden.[^115]
 ## Europäische Schuldenbremse
 
-
-
+Die Maastricht-Kiterien, die in der EU gelten, schreiben vor, dass das Haushaltsdefizit, d.h. die jährliche Neuverschuldung der Mitgliedsstaaten nicht mehr als 3% des BIP betragen darf. Außerdem schreiben sie vor, dass der Schuldenstand der Mitgliedsstaaten zu jedem Zeitpunkt 60% des BIP nicht überschreiten darf.[^EU]
 
 ## Meinungen der Parteien
 ### CDU/CSU
@@ -69,3 +68,4 @@ Wir wollen über eine Reform der Schldenbremse nsere marode Infrastrktr modernis
 [^bsw]: [Wahlprogramm des BSW](https://bsw-vg.de/wp-content/themes/bsw/assets/downloads/BSW%20Wahlprogramm%202025.pdf) zuletzt aufgerufen am 06.02.2025 um 15:00
  [^spd1]: [Regierungsprogramm der SPD](https://www.spd.de/fileadmin/Dokumente/Beschluesse/Programm/2025_SPD_Regierungsprogramm.pdf) zuletzt aufgerufen am 06.02.2025 um 15:00
 [^spd2]: [Neue Regeln für die Schuldenbremse | SPD](https://www.spdfraktion.de/themen/neue-regeln-schuldenbremse) zuletzt aufgerufen am 06.02.2025 um 15:00
+[^EU]: [Bundesfinanzministerium](https://www.bundesfinanzministerium.de/Web/DE/Themen/Oeffentliche_Finanzen/Stabilitaetspolitik/Fiskalregeln/fiskalregeln.html) zuletzt aufgerufen am 06.02.2025 um 15:00
