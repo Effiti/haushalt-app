@@ -21,7 +21,7 @@ Flexibilität wurde in Krisenzeiten bereits bewiesen. Die Schuldenbremse stellt 
 dass Lasten, wie zu hohe Verschuldungen nicht auf spätere Generationen übertragen
 werden und dass die Verpflichtung der Politik, mit den vorhandenen Einnahmen
 auszukommen, die dauerhafte Tragfähigkeit des Bundeshaushaltes langzeitig sichern
-wird.
+wird.[^CDU]
 
 ### AfD
 Wir vertreten die Position, dass die Schuldenbremse nicht abgeschafft werden sollte,
@@ -30,7 +30,7 @@ Ausgaben für die angebliche ,,Klimarettung“ abgebaut und Finanzierungen von
 Prestigeprojekte im Ausland beendet werden. Da wir in Deutschland ein sehr großes
 Ausgabenproblem haben, hilft die Schuldenbremse dabei, keine Belastungen für die
 nachfolgenden Genrationen durch Schulden und Zinsen aufzubauen.Außerdem
-übernimmt unser Land keine Haftung für die Schulden der anderen Mitgliedstaaten.
+übernimmt unser Land keine Haftung für die Schulden der anderen Mitgliedstaaten.[^AfD]
 
 ### FDP
 Unserer Meinung nach, sollte die Schuldenbremse beibehalten werden, um
@@ -38,7 +38,7 @@ Generationsgerechtigkeit, Freiheit für künftige Generationen und ihre finanzie
 Handlungsspielräume zu sichern. Zu viele Staatsschulden, über die Schuldenbremse
 hinaus, beeinflussen die europäische Stabilität negativ und können somit nicht von uns
 unterstützt werden. Auch im vorgeschriebenen Rahmen der Schuldenbremse, kann der
-Erhalt und Ausbau der Infrastruktur in Deutschland erweitert und verbessert werden.
+Erhalt und Ausbau der Infrastruktur in Deutschland erweitert und verbessert werden. [^FDP]
 
 ### Die Linke
 Wir vertreten die Position, dass die Schuldenbremse aufgelöst und mehr Geld in
@@ -47,7 +47,7 @@ anstatt das Geld für Rüstungsvorgänge und klimaschädliche Subventionen
 auszugeben. Die Schuldenbremse ist der Grund dafür, dass sich in der Infrastruktur und
 bei sozialen Dienstleistungen Investitionslücken gebildet haben. Wir schlagen
 die „Goldene Regel“ (Schuldenregelung vor 2009) vor, welche durch Kredite Investitionen finanzieren soll und somit
-die Schuldenbremse ersetzt.
+die Schuldenbremse ersetzt. [^LINKE]
 
 ### SPD
 Wir sind für eine Reform der Schldenbremse. Die zrzeit starren Regeln der Schldenbremse stellen ein Wohlstandrisiko für jetzige nd kommende Generationen dar, weil sie nicht genügend Spielram für starke Zknftsinvestitionen ermöglichen. Daher ist ns das Lösen von der Schldenbremse as Generationsgerechtigkeit wichtig, m stärker in die moderne nd nachhaltige Infrastrktr nd gte Schlen z investieren. [^spd1] [^spd2]
@@ -69,3 +69,6 @@ Wir wollen über eine Reform der Schldenbremse nsere marode Infrastrktr modernis
  [^spd1]: [Regierungsprogramm der SPD](https://www.spd.de/fileadmin/Dokumente/Beschluesse/Programm/2025_SPD_Regierungsprogramm.pdf) zuletzt aufgerufen am 06.02.2025 um 15:00
 [^spd2]: [Neue Regeln für die Schuldenbremse | SPD](https://www.spdfraktion.de/themen/neue-regeln-schuldenbremse) zuletzt aufgerufen am 06.02.2025 um 15:00
 [^EU]: [Bundesfinanzministerium](https://www.bundesfinanzministerium.de/Web/DE/Themen/Oeffentliche_Finanzen/Stabilitaetspolitik/Fiskalregeln/fiskalregeln.html) zuletzt aufgerufen am 06.02.2025 um 15:00
+[^CDU]: [Wahlprogramm von CDU/CSU](https://www.cdu.de/aktuelles/cdu-deutschlands/gemeinsames-wahlprogramm-von-cdu-und-csu/) zuletzt aufgerufen am 14.02.2025 um 15:00
+[^AFD]: [Wahlprogramm der AFD](https://www.bundestagswahl-bw.de/wahlprogramm-afd) zuletzt aufgerufen am 14.02.2025 um 15:00
+[^FDP]: [Wahlprogramm der FDP](https://www.fdp.de/das-wahlprogramm-der-freien-demokraten-zur-bundestagswahl-2025) zuletzt aufgerufen am 14.02.2025 um 15:00
