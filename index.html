@@ -53,12 +53,14 @@
                 <div class="join-vertical">
 
                   <span class="join-item">Rentenbeitrag</span>
-                  <input x-model.number="r.a" type="range" min="0" max="100" value="50" class="range join-item">
+                  <input x-model.number="r.a" type="range" min="0" :max="Math.floor(0.75*r.max/0.25)" value="50"
+                    class="range join-item">
                   </input>
                 </div>
                 <div class="join-vertical">
                   <span class="join-item">Rentensatz</span>
-                  <progress x-model.number="r.c" type="range" :max="r.max+100" value="50" class="progress join-item">
+                  <progress x-model.number="r.c" type="range" :max="Math.floor(r.max/0.25)" value="50"
+                    class="progress join-item">
                   </progress>
                 </div>
                 <div class="join-vertical">
