@@ -1,0 +1,4 @@
+# Staatsinvestitionen und -subventionen
+Der Staat finanziert im Grunde genommen in alle Bereiche des öffentlichen Lebens. Das passiert sowohl direkt, als auch indirekt. Die Straße die gerade saniert wird, als auch der Buchladen von gegenüber. Aber wie passiert das ganze?
+Der Staat (auch die EU) kann Produzenten von Gütern laufend Geld zahlen, ohne eine Gegenleistung zu verlangen. Das dient zunächst einmal zur Förderung der Attraktivität von Deutschland (oder der EU) als Produktionsstandort, damit die Wirtschaftsleistung innerhlab von Deutschland (oder auch der EU) steigt. Oft werden diese Subventionen im Zusammenhang von Wirtschaftswachstum oder dem öffentlichen Leben gezahlt[^1].
+[^1]: [Statistisches Bundesamt](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Methoden/erlaeuterung-subventionen.html) zuletzt aufgerufen am 18.02.2025 um 17:30
