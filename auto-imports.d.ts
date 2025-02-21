@@ -9,6 +9,7 @@ declare global {
   const Dialog: typeof import('./src/components/Dialog')['default']
   const Fragment: typeof import('tsx-dom')['Fragment']
   const StartupDialog: typeof import('./src/components/StartupDialog')['default']
+  const arg: typeof import('./src/components/arg')['default']
   const components: typeof import('./src/components/index')['components']
   const h: typeof import('tsx-dom')['h']
   const mount: typeof import('./src/components/index')['mount']

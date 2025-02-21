@@ -25,6 +25,7 @@ import { ReactComponent as Bremse } from "./texts/bremse.md"
 import { ReactComponent as Schulden } from "./texts/schulden.md"
 //@ts-ignore
 import { ReactComponent as Invest } from "./texts/invest.md"
+import Arg from "./arg.tsx"
 
 const wrap = (C: () => JSX.Element, id?:string) => <Dialog id={id}><C></C></Dialog>
 const wrapStartup = (C: () => JSX.Element) => <StartupDialog><C></C></StartupDialog>
@@ -38,6 +39,7 @@ export const components = {
   5: wrap(Forschung),
   6: wrap(Invest),
   7: wrap(Digitalisierung),
+  arg: wrap(Arg, "arg"),
   startup: wrapStartup(Startup),
   bremse: wrap(Bremse, "bremse"),
   schulden: wrap(Schulden, "schulden"),
