@@ -9,6 +9,7 @@ Wenn die Schuldenbremse greift, kann nicht mehr ausgegeben werden.
 
 Außerdem gibt es Reaktionen, die als Sprechblasen dargestellt sind. Diese Reaktionen gehen von verschiedenen Interessensgruppen aus und beziehen sich auf die verschiedenen Ressorts.
 An verschiedenen Stellen finden sich Info-Schaltflächen, hinter denen sich Recherchierte Texte und Hintergrundinformationen zu verschiedenen Themen finden.
+Zusätzlich stellen wir eine Auswahl unserer eigenen Impressionen, Argumente und Meinungen zur Orientierung dar. Diese können durch das Betätigen der Kommentarschaltfläche neben dem Schuldenbremsenschalter.
 
 
 ## Was ist ein Haushalt?
