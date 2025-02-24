@@ -20,9 +20,9 @@ const texts = [
 
   
 export default function Arg() {
-  return <div class="grid md:grid-cols-3 grid-cols-1 w-full">
+  return <div class="flex w-full flex-wrap">
     { texts.map( Thetext =>
-      <div class="card bg-base-100 w-full shadow-xl px-5 py-10 items-center m-8 place-items-center" >
+      <div class="card bg-base-100 w-full shadow-xl px-5 py-10 items-center m-8 place-items-center text-wrap" >
         <div class="card-body">
           <Thetext></Thetext>
         </div>
