@@ -177,7 +177,17 @@ Alpine.data("main", function() {
 
     schulden_bremse: false,
 
-    bremse_type: "de",
+    bremse_type_m: "de",
+
+    get bremse_type() {
+      return this.bremse_type_m;
+    },
+
+    set bremse_type(t: string) {
+      if (t=="de" && this.debt>30)
+       return;
+      this.bremse_type_m = t;
+    },
 
     get bremse_level() {
       return this.bremse_type == "de" ? 30 : 260;
